@@ -49,6 +49,7 @@ header {
 .header-right {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
 }
 
@@ -188,6 +189,10 @@ header {
     display: flex;
     align-items: center;
 }
+.navigation ul li a img{
+    width: 20px;
+    height: 20px;
+}
 .navigation ul li a h3{
     font-size: 16px;
     font-weight: 500;
@@ -202,6 +207,7 @@ header {
     align-items: center;
     background: #3BB77E;
     padding: 10px 15px;
+    cursor: pointer;
 }
 .nav-container .left h3{
     font-size: 16px;
@@ -212,6 +218,7 @@ header {
 .nav-container .right{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .nav-container .right img{
     width: 20px;
@@ -318,6 +325,10 @@ header {
     color: #253D4E;
 
 }
+.categories .categories-heading .right ,.featured-products .categories-heading .right{
+    display: flex;
+    align-items: center;
+}
 .categories .categories-heading .right a,.featured-products .categories-heading .right a{
     text-decoration: none;
     font-size: 16px;
@@ -389,6 +400,9 @@ div.Arrow-left{
     color: #ADADAD;
 
 }
+.category-item{
+    margin-bottom: 10px;
+}
 .category-item:first-child{
     background:#FEEFEA;
 }
@@ -443,7 +457,8 @@ div.Arrow-left{
     padding: 20px;
     width: 300px;
     text-align: left;
-    border: 1px solid #ADADAD40
+    border: 1px solid #ADADAD40;
+    margin-bottom: 10px;
 }
 
 .product-item img {
@@ -637,6 +652,7 @@ div.Arrow-left{
     display: flex;
     width: 230px;
     align-items:last baseline;
+    overflow: hidden;
 
 }
 .offer .right img{
@@ -711,6 +727,7 @@ div.Arrow-left{
 .daily-best-sells .Daily-sells-heading .left .timer{
     background: #F35244;
     padding: 10px 20px;
+    border-radius:3px;
 }
 .daily-best-sells .Daily-sells-heading .left .timer span{
     font-size: 18px;
@@ -750,12 +767,16 @@ div.Arrow-left{
 .sell-list {
 display: flex;
 justify-content: space-between;
+flex-wrap: wrap;
+}
+.sell-list .form{
+    width: 300px;
 }
 
 .sell-item {
     background-color: #fff;
     border: 1px solid #ADADAD40;
-    width: 250px;
+    width: 300px;
 }
 .sell-item .button{
     background: #FFD480;
@@ -779,8 +800,11 @@ justify-content: space-between;
     font-weight: 500;
     color: #3BB77E;
 }
-.sell-item img{}
+.sell-item img{
+    margin-left: 25px;
+}
 .sell-item span{
+    display: block;
     color: #ADADAD;
     font-size: 12px;
     font-weight: 400;
@@ -800,6 +824,9 @@ justify-content: space-between;
     align-items: center;
     text-align: center;
     margin-left: 10px;
+}
+.sell-item .rating img{
+    margin-left: 0;
 }
 .sell-item .rating span{
     margin:0px 0px 0px 5px;
@@ -886,8 +913,12 @@ justify-content: space-between;
     color: #fff;
     margin-bottom: 0;
 }
-div.sell-list .form{
+.sell-list .form{
     background: #FFF7E6CC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
 }
 .sell-list .form .content{
@@ -898,6 +929,7 @@ div.sell-list .form{
     width: 250px;
     padding:20px 10px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 div.sell-list .form .content h1{
     font-size: 32px;
@@ -912,6 +944,7 @@ div.sell-list .form .content p{
 }
 div.sell-list .form form{
     padding:10px;
+    width: 100%;
 
 }
 div.sell-list .form form .input-group{
@@ -931,6 +964,7 @@ div.sell-list .form form .input-group .input-wrapper{
     background: #fff;
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
 }
 div.sell-list .form form .input-group .input-wrapper img{
     margin-left: 10px;
@@ -946,8 +980,8 @@ div.sell-list .form form button{
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    margin-top: 45px;
-    width: 230px;
+    margin-top: 40px;
+    width:100%;
     font-size: 16px;
     font-weight: 600;
 }
@@ -1175,6 +1209,12 @@ footer {
     font-weight: 500;
     color: #253D4E;
 }
+.footer-logo li h4{
+    font-size: 16px;
+    font-weight: 600;
+    color:#253D4E;
+    margin-right: 10px;
+}
   
 .footer-logo img {
     margin-right: 10px;
@@ -1257,6 +1297,27 @@ footer .tail .media .social-media a img{
   /* Responsive Styles */
 
 /* Tablets (max-width: 1024px) */
+@media (max-width:1870px){
+    .categories .Arrow-left,
+    .categories .Arrow-right,
+    .featured-products .Arrow-left1,
+    .featured-products .product-item .Arrow-right1{
+        display: none;
+    }
+    header,.featured-products,.categories,.special-offers,.daily-best-sells,.selling-details,.deals,footer{
+        padding: 10px 50px;
+    }
+    .special-offers{
+        /* flex-direction: column; */
+    }
+
+}
+@media (max-width:1200px){
+    .nav-container .left h3{
+        display: none;
+    }
+
+}
 @media (max-width: 1024px) {
     header {
         padding: 10px 50px;
@@ -1394,6 +1455,26 @@ footer .tail .media .social-media a img{
     }
     footer{
         padding: 20px;
+    }
+    .categories .categories-heading .right{
+        display: none;
+    }
+    .featured-products .categories-heading .right{
+        display: none;
+    }
+    .hero1,.hero{
+        padding: 0;
+    }
+    .hero1 .right{
+        display: none;
+    }
+
+    .special-offers{
+        padding: 20px;
+    }
+    .special-offers div.left,.special-offers .right-box{
+        padding: 0;
+        width: 100%;
     }
     .special-offers .offer .right,
     .special-offers .offer .right1{
