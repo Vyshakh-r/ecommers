@@ -111,6 +111,37 @@ header {
     display: flex;
     align-items: center;
     margin-right: 50px;
+    position: relative;
+}
+.header-right .wishlist .badge{
+    position: absolute;
+    background-color:#3BB77E;
+    color:#fff;
+    width: 15px;
+    height: 15px;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 500;
+    top: -5px;
+    right:40px;
+}
+.header-right .cart .badge{
+    position: absolute;
+    background-color:#3BB77E;
+    width: 15px;
+    height: 15px;
+    border-radius:50%;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 500;
+    top: -4px;
+    right:69px;
 }
 .header-right .wishlist a{
     text-decoration: none;
@@ -124,6 +155,7 @@ header {
     align-items: center;
     margin-left: 10px;
     margin-right: 50px;
+    position: relative;
 }
 .header-right .cart a{
     text-decoration: none;
@@ -274,7 +306,8 @@ header {
     max-width: 600px;
 }
 .newsletter {
-    display: flex; /* Use flexbox for horizontal alignment */
+    display: flex;
+    flex-wrap:wrap;/* Use flexbox for horizontal alignment */
     align-items: center; /* Center items vertically */
     max-width: 400px; /* Max width for the newsletter */
 }
@@ -312,9 +345,10 @@ header {
 }
 .categories {
   text-align: center;
-  padding: 50px 150px;
+  padding: 50px 0px;
 }
 .categories .categories-heading,.featured-products .categories-heading{
+    padding:50px 150px;
     display: flex;
     justify-content: space-between;
     
@@ -349,33 +383,34 @@ header {
 
 
 .category-list {
+    padding:0px 70px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
 }
-.Arrow-left,.Arrow-right{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background: #F2F3F4;
+.Arrow-left .Arrow, .Arrow-right .Arrow{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color:#F2F3F4;
+    color: #fff;
+    border-radius: 50%;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
  
 }
 div.Arrow-left{
-    position: relative;
-    top: 150px;
-    left: -100px;
+
 
 
 }
 .Arrow-right{
-    position: relative;
-    top: 110px;
-    right: -1650px;
+
+
 
    
 }
@@ -403,46 +438,49 @@ div.Arrow-left{
 .category-item{
     margin-bottom: 10px;
 }
-.category-item:first-child{
-    background:#FEEFEA;
-}
+
 
 .category-item:nth-child(2){
-    background: #F2FCE4;
+    background:#FEEFEA;
 
 
 }
 .category-item:nth-child(3){
-    background: #E8F5E9;
+    background: #FFF3FF;
 
 }
 .category-item:nth-child(4){
 
-    background: #FEEFEA;
+    background: #F2FCE4;
+
 }
 
 
 .category-item:nth-child(5){
-    background: #ECFFEC;
+    background: #FEEFEA;
+
 
 }
 
 .category-item:nth-child(6){
-    background: #FFFCEB;
+    background: #ECFFEC;
+
 
 }
 
 .category-item:nth-child(7){
-    background: #DEF9EC;
-
+    background: #FFFCEB;
 
 }
+.category-item:nth-child(8){
+    background: #DEF9EC;
 
+}
 .category-item img {
 }
 
 .featured-products {
-    padding: 50px 150px;
+    padding: 50px 0px;
     text-align: center;
 }
 
@@ -450,6 +488,12 @@ div.Arrow-left{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding:0px 70px;
+}
+.product-list .Arrow-left,.Arrow-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-item {
@@ -579,10 +623,11 @@ div.Arrow-left{
 }
 
 .offer {
-    background-color: rgba(255, 245, 225, 0.85); /* Set background color with transparency */
-    background-image: url(./assets/bg-3.jpg); /* Set the background image */
-    background-position: center;
-    background-blend-mode: darken;
+        
+    background-color: rgba(255, 245, 225, 0.85);/* Set background color with transparency */
+    background-image: url(./assets/bg-2.jpg); /* Set the background image */
+    background-position:center;
+    background-blend-mode: color-burn;
     width: 49%;
     display: flex;
     justify-content: space-between;
@@ -591,7 +636,7 @@ div.Arrow-left{
     background-color: rgba(197, 234, 217, 1); /* Set background color with transparency */
     background-image: url(./assets/bg-2.jpg); /* Set the background image */
     background-position: center;
-    background-blend-mode:darken; 
+    background-blend-mode:color-burn; 
 }
 .offer .left{
     padding: 50px 50px 50px 100px;
@@ -914,7 +959,10 @@ flex-wrap: wrap;
     margin-bottom: 0;
 }
 .sell-list .form{
-    background: #FFF7E6CC;
+    background-color:#FFF7E6CC;
+/* Set background color with transparency */
+    background-image: url(./assets/bg-3.jpg);
+    background-blend-mode:color-burn;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1287,6 +1335,8 @@ footer .tail .media .social-media:last-child{
     margin-right: 0;
 }
 footer .tail .media .social-media a img{
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -1298,12 +1348,6 @@ footer .tail .media .social-media a img{
 
 /* Tablets (max-width: 1024px) */
 @media (max-width:1870px){
-    .categories .Arrow-left,
-    .categories .Arrow-right,
-    .featured-products .Arrow-left1,
-    .featured-products .product-item .Arrow-right1{
-        display: none;
-    }
     header,.featured-products,.categories,.special-offers,.daily-best-sells,.selling-details,.deals,footer{
         padding: 10px 50px;
     }
@@ -1315,6 +1359,10 @@ footer .tail .media .social-media a img{
 @media (max-width:1200px){
     .nav-container .left h3{
         display: none;
+    }
+    .categories .categories-heading,.featured-products .categories-heading{
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
 }
@@ -1342,6 +1390,14 @@ footer .tail .media .social-media a img{
     .newsletter{
         margin-bottom: 20px;
     }
+    .hero-image{
+        display: none;
+    }
+    .input-container{
+    }
+    .newsletter{
+        flex-wrap: wrap;
+    }
     .nav-container{}
     .nav-container .left{}
     .nav-container .left img{}
@@ -1353,11 +1409,12 @@ footer .tail .media .social-media a img{
     .featured-products .categories-heading{
         align-items: center;
         margin-bottom: 20px;
+        padding: 50px 50px;
     }
     .categories .Arrow-left,
     .categories .Arrow-right,
-    .featured-products .Arrow-left1,
-    .featured-products .product-item .Arrow-right1{
+    .featured-products .Arrow-left,.Arrow-right
+    {
         display: none;
     }
     .categories .category-list{}
